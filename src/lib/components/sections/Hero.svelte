@@ -42,7 +42,7 @@
 	/>
 
 	<img
-		class="hidden lg:block z-10 absolute h-[40vh] 2xl:h-[60vh] -right-[25vh]"
+		class="hidden lg:block xl:hidden z-10 absolute h-[40vh] 2xl:h-[60vh] -right-[25vh]"
 		style="bottom: calc(-10vh + {0.1 * y}px); transform: rotate({12 - y * -0.01}deg)"
 		src={Pizza}
 		alt="Pizza"
