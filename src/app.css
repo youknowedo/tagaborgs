@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h3 {
+	@apply text-2xl font-pacifico;
+}
+
+h2 {
+	@apply text-3xl font-bold uppercase font-paytone;
+}
+
+.carousel {
+	transition: 0.5s linear;
+}
