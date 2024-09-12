@@ -92,7 +92,7 @@
 					href={foodora}
 					class="py-2 w-3/4 border-[1px] rounded-full text-center border-yellow-400 bg-yellow-400 hover:bg-transparent text-red-500 hover:text-yellow-400 font-bold duration-200"
 				>
-					Beställ!
+					BESTÄLL!
 				</a>
 			</div>
 		</div>
