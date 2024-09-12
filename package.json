@@ -16,7 +16,7 @@
 		"@fontsource/pacifico": "^5.1.0",
 		"@fontsource/paytone-one": "^5.1.0",
 		"@fontsource/ultra": "^5.1.0",
-		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-node": "^5.2.2",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^9.6.0",
