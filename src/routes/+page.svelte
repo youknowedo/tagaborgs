@@ -37,8 +37,8 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="flex flex-col md:flex-row">
-	<div class="hidden h-screen w-72 md:block">
+<div class="flex flex-col lg:flex-row">
+	<div class="hidden h-screen w-72 lg:block">
 		<div class="fixed flex flex-col justify-between h-full text-white w-72">
 			<div class="flex flex-col items-center">
 				<img src={bnj} class="object-contain w-32 h-32 my-12" alt="" />
@@ -98,14 +98,14 @@
 		</div>
 	</div>
 
-	<div class="absolute z-50 flex w-full md:hidden">
+	<div class="absolute z-50 flex w-full lg:hidden">
 		<div class="container my-8">
 			<img src={bnj} class="h-20" alt="" />
 		</div>
 	</div>
 
 	<div
-		class="relative content md:w-[calc(100%-20rem)] md:h-[calc(100vh-2rem)] overflow-scroll overflow-x-hidden md:m-4 md:rounded-3xl"
+		class="relative content lg:w-[calc(100%-20rem)] lg:h-[calc(100vh-2rem)] overflow-scroll overflow-x-hidden lg:m-4 lg:rounded-3xl"
 	>
 		<div class="relative z-10 overflow-hidden bg-white shadow-lg rounded-b-3xl mb-72">
 			<Hero />

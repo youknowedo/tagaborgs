@@ -4,14 +4,14 @@
 
 <div class="bg-white">
 	<article
-		class="container flex flex-col items-center text-center py-28 md:px-24"
+		class="container flex flex-col items-center text-center py-28 lg:px-24"
 		bind:this={about}
 		id="about"
 	>
 		<h3 class="text-red-400/75">Vilka vi är</h3>
 		<h2 class="mb-10">Historisk pizza på Föreningsgatan</h2>
 
-		<p class="md:text-2xl font-montserrat">
+		<p class="lg:text-2xl font-montserrat">
 			Sugen på en god pizza? Kanske är du på humör för en saftig hamburgare? Oavsett vilken typ av
 			måltid du har i åtanke, är Tågaborgs Pizzeria redo att förbereda den åt dig. Sedan 2020 har
 			Tågaborgs Pizzeria varit det goda matstället för Helsingborgare. Från hamburgare till pizza,

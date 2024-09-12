@@ -5,7 +5,7 @@
 	const year = date.getFullYear();
 </script>
 
-<footer class="fixed inset-0 top-auto z-0 md:left-80">
+<footer class="fixed inset-0 top-auto z-0 lg:left-80">
 	<div class="container flex flex-col items-center py-16 text-5xl text-center text-white">
 		<h3 class="mb-6 font-ultra">Tågaborgs</h3>
 
