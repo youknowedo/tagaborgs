@@ -84,7 +84,7 @@
 		<h3 class="text-white/75">Meny</h3>
 		<h2 class="mb-4 text-white">Våra pizzor</h2>
 
-		<div class="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
+		<div class="grid grid-cols-1 gap-4 mt-10 xl:grid-cols-2">
 			{#each expanded ? MENU : MENU.slice(0, 6) as item}
 				<div
 					class="flex items-center justify-between p-4 text-white shadow-md bg-white/10 rounded-xl"

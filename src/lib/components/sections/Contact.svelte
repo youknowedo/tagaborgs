@@ -4,8 +4,8 @@
 	export let contact: HTMLElement | undefined;
 </script>
 
-<div class="flex flex-col bg-white lg:flex-row" bind:this={contact} id="contact">
-	<div class="lg:w-1/2 h-96 lg:h-auto">
+<div class="flex flex-col xl:flex-row" bind:this={contact} id="contact">
+	<div class="xl:w-1/2 h-96 xl:h-auto">
 		<iframe
 			title="Google Maps"
 			class="w-[calc(100%-2rem)] m-4 h-[calc(100%-2rem)] rounded-3xl"
@@ -16,8 +16,8 @@
 		/>
 	</div>
 
-	<div class="lg:w-1/2">
-		<div class="container py-20 lg:py-28">
+	<div class="xl:w-1/2">
+		<div class="container py-20 xl:py-28">
 			<h3 class="text-red-500/75">Kontakt</h3>
 			<h2 class="mb-4">Hitta Hit</h2>
 
