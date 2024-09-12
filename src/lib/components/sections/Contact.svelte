@@ -4,11 +4,11 @@
 	export let contact: HTMLElement | undefined;
 </script>
 
-<div class="flex flex-col xl:flex-row" bind:this={contact} id="contact">
+<div class="container flex flex-col gap-4 px-0 py-8 xl:flex-row" bind:this={contact} id="contact">
 	<div class="xl:w-1/2 h-96 xl:h-auto">
 		<iframe
 			title="Google Maps"
-			class="w-[calc(100%-2rem)] m-4 h-[calc(100%-2rem)] rounded-3xl"
+			class="w-full h-full rounded-3xl"
 			style="border:0;"
 			loading="lazy"
 			allowFullScreen
