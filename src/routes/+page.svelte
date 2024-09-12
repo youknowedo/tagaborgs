@@ -98,6 +98,12 @@
 		</div>
 	</div>
 
+	<div class="absolute z-50 flex w-full md:hidden">
+		<div class="container my-8">
+			<img src={bnj} class="h-20" alt="" />
+		</div>
+	</div>
+
 	<div
 		class="relative content md:w-[calc(100%-20rem)] md:h-[calc(100vh-2rem)] overflow-scroll overflow-x-hidden md:m-4 md:rounded-3xl"
 	>
