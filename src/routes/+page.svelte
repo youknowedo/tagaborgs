@@ -1,5 +1,8 @@
 <script lang="ts">
+	import bnj from '$lib/assets/bnj.webp';
+	import logo from '$lib/assets/logo-pizzeria.svg';
 	import pizza from '$lib/assets/pizza.webp';
+
 	import Icons from '$lib/components/Icons.svelte';
 
 	import About from '$lib/components/sections/About.svelte';
@@ -7,9 +10,8 @@
 	import Contact from '$lib/components/sections/Contact.svelte';
 	import Footer from '$lib/components/sections/Footer.svelte';
 	import Menu from '$lib/components/sections/Menu.svelte';
-	import { foodora } from '$lib/data/links';
+	import { foodora } from '$lib/links';
 
-	import bnj from '$lib/assets/bnj.webp';
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import { onMount } from 'svelte';
 
@@ -20,15 +22,7 @@
 	let menu: HTMLElement | undefined;
 	let about: HTMLElement | undefined;
 
-	let open = false;
-
-	onMount(() => {
-		if (open) {
-			document.body.classList.add('overflow-hidden');
-		} else {
-			document.body.classList.remove('overflow-hidden');
-		}
-	});
+	foodora.set('https://www.foodora.se/restaurant/s6lz/tagaborgs-pizzeria');
 </script>
 
 <svelte:head>
@@ -41,7 +35,7 @@
 	<div class="hidden h-screen w-72 xl:block">
 		<div class="fixed flex flex-col justify-between h-full text-white w-72">
 			<div class="flex flex-col items-center">
-				<img src={bnj} class="object-contain w-32 h-32 my-12" alt="" />
+				<img src={logo} class="object-contain w-32 h-32 my-12" alt="" />
 
 				<div class="text-center">
 					<button
@@ -92,8 +86,8 @@
 				</div>
 
 				<a
-					href={foodora}
-					class="py-2 w-3/4 border-[1px] rounded-full text-center border-yellow-400 bg-yellow-400 hover:bg-transparent text-red-500 hover:text-yellow-400 font-bold duration-200"
+					href={$foodora}
+					class="py-2 w-3/4 border-[1px] rounded-full text-center border-taga-orange-500 bg-taga-orange-500 hover:bg-transparent text-white hover:text-taga-orange-500 font-bold duration-200"
 				>
 					BESTÄLL!
 				</a>
@@ -109,7 +103,7 @@
 
 	<div class="relative drop-shadow-lg xl:w-[calc(100%-20rem)] xl:m-4">
 		<div
-			class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden border-t content xl:rounded-3xl"
+			class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden content xl:rounded-3xl"
 			on:scroll={(e) =>
 				(innerY = e.currentTarget.scrollTop === 0 ? undefined : e.currentTarget.scrollTop)}
 		>

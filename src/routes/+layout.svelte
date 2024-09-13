@@ -7,4 +7,6 @@
 	import '../app.css';
 </script>
 
-<slot />
+<div class="flex flex-col min-h-screen">
+	<slot />
+</div>

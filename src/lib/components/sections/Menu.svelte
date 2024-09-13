@@ -13,9 +13,9 @@
 </script>
 
 <div class="px-4" bind:this={el}>
-	<div class="container p-12 mx-auto bg-red-500 rounded-3xl">
+	<div class="container p-12 mx-auto bg-taga-orange-500 rounded-3xl">
 		<h3 class="text-white/75">Meny</h3>
-		<h2 class="mb-4 text-white">Våra pizzor</h2>
+		<h2 class="mb-4 text-white">Våra rätter</h2>
 
 		<div class="grid grid-cols-1 gap-4 mt-10 xl:grid-cols-2">
 			{#each expanded ? menu : menu.slice(0, 4) as item}
@@ -27,7 +27,7 @@
 						<p>{item.price} kr</p>
 						<p class="max-w-[80%]">{item.description}</p>
 					</div>
-					<img src={pizza} class="h-20" alt="" />
+					<img src={item.img} class="h-20" alt="" />
 				</div>
 			{/each}
 		</div>

@@ -19,14 +19,14 @@
 
 		<div class="xl:w-1/2">
 			<div class="container py-20 xl:py-28">
-				<h3 class="text-red-500/75">Kontakt</h3>
+				<h3 class="text-taga-orange-500/75">Kontakt</h3>
 				<h2 class="mb-4">Hitta Hit</h2>
 
 				<ul>
 					<li class="mb-2">
 						<h4 class="-mb-1 text-lg font-paytone">Adress</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-red-50 hover:text-red-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
 						>
 							<a href="https://maps.app.goo.gl/goz2mkTRMHnBJ2Ze7">
 								Föreningsgatan, 254 38 Helsingborg
@@ -36,7 +36,7 @@
 					<li class="mb-2">
 						<h4 class="-mb-1 text-lg font-paytone">Telefon</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-red-50 hover:text-red-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
 						>
 							<a href="tel:042140900">042-14 09 00</a>
 						</h5>
@@ -44,7 +44,7 @@
 					<li class="mb-4">
 						<h4 class="-mb-1 text-lg font-paytone">Email</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-red-50 hover:text-red-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
 						>
 							<a href="mailto:kontakt@tagaborgs.se">kontakt@tagaborgs.se</a>
 						</h5>
