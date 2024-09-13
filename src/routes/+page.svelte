@@ -110,7 +110,7 @@
 
 	<div class="relative drop-shadow-lg xl:w-[calc(100%-20rem)] xl:m-4">
 		<div
-			class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden content xl:rounded-3xl"
+			class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden border-t content xl:rounded-3xl"
 			on:scroll={(e) =>
 				(innerY = e.currentTarget.scrollTop === 0 ? undefined : e.currentTarget.scrollTop)}
 		>
