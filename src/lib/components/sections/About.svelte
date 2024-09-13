@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let about: HTMLElement | undefined;
+	export let el: HTMLElement | undefined;
 </script>
 
 <div>
 	<article
 		class="container flex flex-col items-center text-center py-28 xl:px-24"
-		bind:this={about}
+		bind:this={el}
 		id="about"
 	>
 		<h3 class="text-red-400/75">Vilka vi är</h3>

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Icons from '../Icons.svelte';
 
-	export let contact: HTMLElement | undefined;
+	export let el: HTMLElement | undefined;
 </script>
 
 <div class="px-4">
-	<div class="container flex flex-col gap-4 px-0 py-8 xl:flex-row" bind:this={contact} id="contact">
+	<div class="container flex flex-col gap-4 px-0 py-8 xl:flex-row" bind:this={el} id="contact">
 		<div class="xl:w-1/2 h-96 xl:h-auto">
 			<iframe
 				title="Google Maps"

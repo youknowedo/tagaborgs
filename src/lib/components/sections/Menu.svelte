@@ -3,89 +3,22 @@
 
 	let expanded = false;
 
-	export let menu: HTMLElement | undefined;
-
-	const MENU: { name: string; price: number; description: string }[] = [
-		{
-			name: 'Vesuvio',
-			price: 127,
-			description: 'Tomatsås, ost och skinka.'
-		},
-		{
-			name: 'Capricciosa',
-			price: 127,
-			description: 'Tomatsås, ost, skinka och champinjoner.'
-		},
-		{
-			name: 'Gondola',
-			price: 127,
-			description: 'Tomatsås, ost, skicka och räkor.'
-		},
-		{
-			name: 'Hawaii',
-			price: 127,
-			description: 'Tomatsås, ost, skinka och ananas.'
-		},
-		{
-			name: 'Calzone',
-			price: 127,
-			description: 'Inbakad pizza med tomatsås, ost och skinka.'
-		},
-		{
-			name: 'Calzone Special',
-			price: 131,
-			description: 'Inbakad pizza med tomatsås, ost, skinka, räkor och champinjoner.'
-		},
-		{
-			name: 'Romana',
-			price: 131,
-			description: 'Tomatsås, ost, skinka, champinjoner och räkor.'
-		},
-		{
-			name: 'Quattro Stagione',
-			price: 138,
-			description: 'Tomatsås, ost, skinka, räkor, champinjoner och musslor.'
-		},
-		{
-			name: 'Italia',
-			price: 138,
-			description: 'Tomatsås, ost, skinka, köttfärs, salami och lök.'
-		},
-		{
-			name: 'Italia Special',
-			price: 138,
-			description: 'Tomatsås, ost, skinka, köttfärs, salami, lök och bearnaisesås.'
-		},
-		{
-			name: 'Tefat',
-			price: 138,
-			description: 'Dubbelinbakad pizza med tomatsås, ost och skinka.'
-		},
-		{
-			name: 'Bambino',
-			price: 114,
-			description: 'Tomatsås, ost, skinka och tonfisk.'
-		},
-		{
-			name: 'Tågaborg',
-			price: 138,
-			description: 'Tomatsås, ost, skinka, oliver, räkor, paprika och kronärtskocka.'
-		},
-		{
-			name: 'Split',
-			price: 131,
-			description: 'Tomatsås, ost, skinka, ananas, banan och curry.'
-		}
-	];
+	export let el: HTMLElement | undefined;
+	export let menu: {
+		name: string;
+		price: number;
+		description: string;
+		img: string;
+	}[];
 </script>
 
-<div class="px-4" bind:this={menu}>
+<div class="px-4" bind:this={el}>
 	<div class="container p-12 mx-auto bg-red-500 rounded-3xl">
 		<h3 class="text-white/75">Meny</h3>
 		<h2 class="mb-4 text-white">Våra pizzor</h2>
 
 		<div class="grid grid-cols-1 gap-4 mt-10 xl:grid-cols-2">
-			{#each expanded ? MENU : MENU.slice(0, 4) as item}
+			{#each expanded ? menu : menu.slice(0, 4) as item}
 				<div
 					class="flex items-center justify-between p-4 text-white shadow-md bg-white/10 rounded-xl"
 				>

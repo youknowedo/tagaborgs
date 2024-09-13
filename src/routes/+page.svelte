@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-
+	import pizza from '$lib/assets/pizza.webp';
 	import Icons from '$lib/components/Icons.svelte';
 
 	import About from '$lib/components/sections/About.svelte';
@@ -116,9 +115,97 @@
 		>
 			<div class="relative z-10 overflow-hidden bg-white rounded-b-3xl mb-72">
 				<Hero y={innerY} />
-				<Contact bind:contact />
-				<Menu bind:menu />
-				<About bind:about />
+				<Contact bind:el={contact} />
+				<Menu
+					bind:el={menu}
+					menu={[
+						{
+							name: 'Vesuvio',
+							price: 127,
+							description: 'Tomatsås, ost och skinka.',
+							img: pizza
+						},
+						{
+							name: 'Capricciosa',
+							price: 127,
+							description: 'Tomatsås, ost, skinka och champinjoner.',
+							img: pizza
+						},
+						{
+							name: 'Gondola',
+							price: 127,
+							description: 'Tomatsås, ost, skicka och räkor.',
+							img: pizza
+						},
+						{
+							name: 'Hawaii',
+							price: 127,
+							description: 'Tomatsås, ost, skinka och ananas.',
+							img: pizza
+						},
+						{
+							name: 'Calzone',
+							price: 127,
+							description: 'Inbakad pizza med tomatsås, ost och skinka.',
+							img: pizza
+						},
+						{
+							name: 'Calzone Special',
+							price: 131,
+							description: 'Inbakad pizza med tomatsås, ost, skinka, räkor och champinjoner.',
+							img: pizza
+						},
+						{
+							name: 'Romana',
+							price: 131,
+							description: 'Tomatsås, ost, skinka, champinjoner och räkor.',
+							img: pizza
+						},
+						{
+							name: 'Quattro Stagione',
+							price: 138,
+							description: 'Tomatsås, ost, skinka, räkor, champinjoner och musslor.',
+							img: pizza
+						},
+						{
+							name: 'Italia',
+							price: 138,
+							description: 'Tomatsås, ost, skinka, köttfärs, salami och lök.',
+							img: pizza
+						},
+						{
+							name: 'Italia Special',
+							price: 138,
+							description: 'Tomatsås, ost, skinka, köttfärs, salami, lök och bearnaisesås.',
+							img: pizza
+						},
+						{
+							name: 'Tefat',
+							price: 138,
+							description: 'Dubbelinbakad pizza med tomatsås, ost och skinka.',
+							img: pizza
+						},
+						{
+							name: 'Bambino',
+							price: 114,
+							description: 'Tomatsås, ost, skinka och tonfisk.',
+							img: pizza
+						},
+						{
+							name: 'Tågaborg',
+							price: 138,
+							description: 'Tomatsås, ost, skinka, oliver, räkor, paprika och kronärtskocka.',
+							img: pizza
+						},
+						{
+							name: 'Split',
+							price: 131,
+							description: 'Tomatsås, ost, skinka, ananas, banan och curry.',
+							img: pizza
+						}
+					]}
+				/>
+				<About bind:el={about} />
 				<Banner />
 			</div>
 		</div>
