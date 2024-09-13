@@ -15,6 +15,7 @@
 	import { onMount } from 'svelte';
 
 	let y = 0;
+	let innerY: number | undefined = undefined;
 
 	let contact: HTMLElement | undefined;
 	let menu: HTMLElement | undefined;
@@ -104,10 +105,14 @@
 		</div>
 	</div>
 
-	<div class=" relative drop-shadow-lg xl:w-[calc(100%-20rem)] xl:m-4">
-		<div class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden content xl:rounded-3xl">
+	<div class="relative drop-shadow-lg xl:w-[calc(100%-20rem)] xl:m-4">
+		<div
+			class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden content xl:rounded-3xl"
+			on:scroll={(e) =>
+				(innerY = e.currentTarget.scrollTop === 0 ? undefined : e.currentTarget.scrollTop)}
+		>
 			<div class="relative z-10 overflow-hidden bg-white rounded-b-3xl mb-72">
-				<Hero />
+				<Hero y={innerY} />
 				<Contact bind:contact />
 				<Menu bind:menu />
 				<About bind:about />

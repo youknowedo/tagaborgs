@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import BnJ from '$lib/assets/bnj.webp';
 	import Foodora from '$lib/assets/foodora.webp';
 	import Pizza from '$lib/assets/pizza.webp';
@@ -6,10 +6,11 @@
 	import { goto } from '$app/navigation';
 	import { foodora } from '$lib/data/links';
 
-	let y = 0;
+	export let y: number | undefined;
+	let windowY = 0;
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={windowY} />
 
 <div class="relative bg-red-50">
 	<div
@@ -29,21 +30,22 @@
 
 	<img
 		class="hidden xl:block z-10 absolute h-[40vh] 2xl:h-[60vh] -left-[25vh]"
-		style="top: calc(-20vh - {0.5 * y}px);"
+		style="top: calc(-20vh - {0.5 * (y ?? windowY)}px);"
 		src={Pizza}
 		alt="Pizza"
 	/>
 	<img
 		class="hidden xl:block z-10 absolute h-[40vh] 2xl:h-[55vh]"
-		style="bottom: {-128}px; right: calc(-10vh - {0.05 * y}px); transform: rotate({12 -
-			y * -0.01}deg)"
+		style="bottom: {-128}px; right: calc(-10vh - {0.05 * (y ?? windowY)}px); transform: rotate({12 -
+			(y ?? windowY) * -0.01}deg)"
 		src={BnJ}
 		alt="Ben & Jerry's"
 	/>
 
 	<img
 		class="hidden lg:block xl:hidden z-10 absolute h-[40vh] 2xl:h-[60vh] -right-[25vh]"
-		style="bottom: calc(-10vh + {0.1 * y}px); transform: rotate({12 - y * -0.01}deg)"
+		style="bottom: calc(-10vh + {0.1 * (y ?? windowY)}px); transform: rotate({12 -
+			(y ?? windowY) * -0.01}deg)"
 		src={Pizza}
 		alt="Pizza"
 	/>
@@ -55,7 +57,10 @@
 			alt="Foodora Logo"
 		/>
 	</div>
-	<p class="absolute text-red-400 bottom-8 font-paytone" style="left: {32 - y * 0.5}px">
+	<p
+		class="absolute text-red-400 bottom-8 font-paytone"
+		style="left: {32 - (y ?? windowY) * 0.5}px"
+	>
 		* Enligt Foodoras kunder
 	</p>
 </div>
