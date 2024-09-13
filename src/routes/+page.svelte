@@ -104,17 +104,16 @@
 		</div>
 	</div>
 
-	<div
-		class="relative content xl:w-[calc(100%-20rem)] xl:h-[calc(100vh-2rem)] overflow-scroll overflow-x-hidden xl:m-4 xl:rounded-3xl"
-	>
-		<div class="relative z-10 overflow-hidden bg-white shadow-lg rounded-b-3xl mb-72">
-			<Hero />
-			<Contact bind:contact />
-			<Menu bind:menu />
-			<About bind:about />
-			<Banner />
+	<div class=" relative drop-shadow-lg xl:w-[calc(100%-20rem)] xl:m-4">
+		<div class="overflow-scroll xl:h-[calc(100vh-2rem)] overflow-x-hidden content xl:rounded-3xl">
+			<div class="relative z-10 overflow-hidden bg-white rounded-b-3xl mb-72">
+				<Hero />
+				<Contact bind:contact />
+				<Menu bind:menu />
+				<About bind:about />
+				<Banner />
+			</div>
 		</div>
-
 		<Footer />
 	</div>
 </div>
