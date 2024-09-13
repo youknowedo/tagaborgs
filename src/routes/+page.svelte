@@ -46,8 +46,8 @@
 
 				<div class="text-center">
 					<button
-						class="text-xl hover:text-white py-2 duration-200 cursor-pointer container {y >
-							(contact?.offsetTop || 0) && y < (about?.offsetTop || 0)
+						class="text-xl hover:text-white py-2 duration-200 cursor-pointer container {(innerY ??
+							y) > (contact?.offsetTop || 0) && (innerY ?? y) < (menu?.offsetTop || 0)
 							? 'text-white'
 							: 'text-white/70'}"
 						on:click={() =>
@@ -59,7 +59,10 @@
 						Kontakt
 					</button>
 					<button
-						class="container py-2 text-xl duration-200 cursor-pointer hover:text-white text-white/70"
+						class="container py-2 text-xl duration-200 cursor-pointer hover:text-white {(innerY ??
+							y) > (menu?.offsetTop || 0) && (innerY ?? y) < (about?.offsetTop || 0)
+							? 'text-white'
+							: 'text-white/70'}"
 						on:click={() =>
 							menu?.scrollIntoView({
 								block: 'start',
@@ -69,8 +72,8 @@
 						Meny
 					</button>
 					<button
-						class="text-xl hover:text-white py-2 duration-200 cursor-pointer container {y >
-						(about?.offsetTop || 0)
+						class="text-xl hover:text-white py-2 duration-200 cursor-pointer container {(innerY ??
+							y) > (about?.offsetTop || 0)
 							? 'text-white'
 							: 'text-white/70'}"
 						on:click={() =>
