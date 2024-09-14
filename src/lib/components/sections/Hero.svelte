@@ -1,10 +1,8 @@
 <script lang="ts">
 	import BnJ from '$lib/assets/bnj.webp';
-	import Foodora from '$lib/assets/foodora.svg';
 	import Pizza from '$lib/assets/pizza.webp';
 	import res1 from '$lib/assets/res1.jpg';
 
-	import { goto } from '$app/navigation';
 	import { foodora } from '$lib/links';
 
 	export let y: number | undefined;
@@ -19,7 +17,7 @@
 			class="z-50 container h-[75vh] flex flex-col justify-center items-center text-center xl:px-24 relative"
 			id="about"
 		>
-			<h2 class="mb-10 text-3xl font-bold text-white uppercase font-paytone xl:text-5xl">
+			<h2 class="mb-10 text-xl font-bold text-white uppercase sm:text-3xl font-paytone xl:text-5xl">
 				Populäraste restaurangen<br />i Helsingborg 2022*
 			</h2>
 			<a

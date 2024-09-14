@@ -97,7 +97,7 @@
 
 	<div class="absolute z-50 flex w-full xl:hidden">
 		<div class="container my-8">
-			<img src={bnj} class="h-20" alt="" />
+			<img src={logo} class="h-20" alt="" />
 		</div>
 	</div>
 
