@@ -1,20 +1,36 @@
 <script lang="ts">
+	import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+	import { onMount } from 'svelte';
 	import Icons from '../Icons.svelte';
 
 	export let el: HTMLElement | undefined;
+
+	onMount(() => {
+		mapboxgl.accessToken =
+			'pk.eyJ1IjoieW91a25vd2VkbyIsImEiOiJjbTE1ZjYxcGkwN250MnJxdjdzc2p0cG52In0.z8e6uFhdL4Mj4FpoZoEDGg';
+		const map = new mapboxgl.Map({
+			container: 'map', // container ID
+			style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+			center: [12.6933333, 56.055], // starting position [lng, lat]
+			zoom: 15 // starting zoom
+		});
+		// Create a default Marker and add it to the map.
+		const marker = new mapboxgl.Marker({
+			color: '#d4722a'
+		})
+			.setLngLat([12.6933333, 56.055])
+			.addTo(map);
+	});
 </script>
+
+<head>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet" />
+</head>
 
 <div class="px-4">
 	<div class="container flex flex-col gap-4 px-0 py-8 xl:flex-row" bind:this={el} id="contact">
 		<div class="xl:w-1/2 h-96 xl:h-auto">
-			<iframe
-				title="Google Maps"
-				class="w-full h-full rounded-3xl"
-				style="border:0;"
-				loading="lazy"
-				allowFullScreen
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2227.8969917340573!2d12.693349800000002!3d56.055084799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46523239f383efa3%3A0x35ada4a42fbb3ac8!2sT%C3%A5gaborgs%20pizzeria!5e0!3m2!1ssv!2sse!4v1726160838284!5m2!1ssv!2sse&center=56.055248,12.698776"
-			/>
+			<div id="map" class="h-full overflow-hidden rounded-3xl"></div>
 		</div>
 
 		<div class="xl:w-1/2">
@@ -26,7 +42,7 @@
 					<li class="mb-2">
 						<h4 class="-mb-1 text-lg font-paytone">Adress</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-500 hover:text-taga-orange-500 duration-150"
 						>
 							<a href="https://maps.app.goo.gl/goz2mkTRMHnBJ2Ze7">
 								Föreningsgatan, 254 38 Helsingborg
@@ -36,7 +52,7 @@
 					<li class="mb-2">
 						<h4 class="-mb-1 text-lg font-paytone">Telefon</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-500 hover:text-taga-orange-500 duration-150"
 						>
 							<a href="tel:042140900">042-14 09 00</a>
 						</h5>
@@ -44,7 +60,7 @@
 					<li class="mb-4">
 						<h4 class="-mb-1 text-lg font-paytone">Email</h4>
 						<h5
-							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-50 hover:text-taga-orange-50 duration-150"
+							class="inline text-xl font-montserrat cursor-pointer border-b-[1px] border-transparent hover:border-taga-orange-500 hover:text-taga-orange-500 duration-150"
 						>
 							<a href="mailto:kontakt@tagaborgs.se">kontakt@tagaborgs.se</a>
 						</h5>
