@@ -155,49 +155,43 @@
 						name: 'Royal Burger',
 						price: 119,
 						description:
-							'Royal burger är den klassiska hamburgaren men med vår egna touch! Den innehåller vårt kryddiga 100g kött, krispsallad, tomat, ost, salt gurka och hamburgaredressing!',
+							'vårt kryddiga 100g kött, krispsallad, tomat, ost, salt gurka och hamburgaredressing',
 						img: Burger
 					},
 					{
 						name: 'Crazy Cheese',
 						price: 119,
-						description:
-							'Ostens hamburgare, tillsammans med vårt kryddiga 100g kött, cheddar ost, chilicheese, cheddar doritos chip, majodressing och krispsallad!',
+						description: 'vårt kryddiga 100g kött, cheddar ost, chilicheese, cheddar doritos chip',
 						img: Burger
 					},
 					{
 						name: 'Grand Tryffelburger',
 						price: 119,
-						description:
-							'Tryfflets hamburgare! Blandningen med tryffeldressing och teriyakisås tillsammans med vårt kryddiga 100gkött, krispsallad, ost, lök - har du en nyfunnen hamburgarkärlek!',
+						description: 'vårt kryddiga 100g kött, krispsallad, ost, lök',
 						img: Burger
 					},
 					{
 						name: 'Volcano burgare 🌶',
 						price: 119,
-						description:
-							'Med hettan av pressade jalapeños i köttet och sirrachomajo görs denna volcvano burger tillsammans med vårt kryddiga 100g kött, ost, färsk jalapeños, rostad lök och toppad med chilli cheese, en riktigt smakvulkan i din mun!',
+						description: 'vårt kryddiga 100g kött, ost, färsk jalapeños, rostad lök, chilli cheese',
 						img: Burger
 					},
 					{
 						name: 'Smoked BBQ Burger',
 						price: 119,
-						description:
-							'Med smoked majo dressing, krispsallad, ost, rostad lök och vårt kryddiga 100g kött - toppar vi denna hamburgaren med 3 stycken lökringar och droppar av chopotle bbq sås! Smoooooked!',
+						description: 'vårt kryddiga 100g kött, lökringar, chopotle bbq-sås',
 						img: Burger
 					},
 					{
 						name: 'Hot Crispy Chicken',
 						price: 119,
-						description:
-							'Vår speciella crispy chicken burgare innehåller Coleslaw sallad, cheddar ost, tomat och srirachamajo, mums!',
+						description: 'Coleslaw sallad, cheddar ost, tomat, srirachamajo',
 						img: Burger
 					},
 					{
 						name: 'Halloumi Burger',
 						price: 119,
-						description:
-							'Vår vegetariska burgare med två skivor halloumi som är stekta och tillsammans med ruccolasallad, avokado, honung utgör vår smakrika halloumi burger!',
+						description: 'två skivor halloumi, ruccolasallad, avokado, honung',
 						img: Burger
 					}
 				]}
